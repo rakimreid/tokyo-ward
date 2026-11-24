@@ -1,0 +1,58 @@
+{
+  "seed": 42,
+  "lang_min_relative_distance": 0.1,
+  "minhash": {
+    "threshold": 0.7,
+    "num_perm": 128,
+    "shingle_k": 5
+  },
+  "reviews": {
+    "input": 738305,
+    "dropped_blank": 111,
+    "dropped_no_letters": 2442,
+    "kept": 735752
+  },
+  "overviews": {
+    "listings": 20370,
+    "nonblank_overviews": 10916,
+    "exact_dups_removed_within_ward": 7063,
+    "exact_dup_rate": 0.647,
+    "templates_spanning_multiple_wards": 40,
+    "near_dups_removed": 383,
+    "kept": 3470,
+    "total_dedup_rate": 0.6821,
+    "minhash_seconds": 2.3
+  },
+  "language_seconds": 771.3,
+  "overview_lang_restricted_set": [
+    "EN",
+    "JA",
+    "ZH",
+    "KO",
+    "FR",
+    "ES",
+    "DE",
+    "IT",
+    "NL",
+    "PT",
+    "TH",
+    "RU"
+  ],
+  "overview_lang_changed": 331,
+  "coverage": [
+    {
+      "source": "airbnb_overview",
+      "n": 3470,
+      "nlptown_coverage": 0.981,
+      "unknown_rate": 0.007,
+      "long_text": 7
+    },
+    {
+      "source": "airbnb_review",
+      "n": 735752,
+      "nlptown_coverage": 0.621,
+      "unknown_rate": 0.021,
+      "long_text": 1692
+    }
+  ]
+}

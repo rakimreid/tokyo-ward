@@ -1,0 +1,582 @@
+{
+  "ward": "Shibuya",
+  "meta": {
+    "source": "Inside Airbnb Tokyo, snapshot 2025-09-29 (scraped 29-30 Sep 2025)",
+    "scope": "11 wards; Airbnb listings and reviews only",
+    "sentiment_model": "nlptown/bert-base-multilingual-uncased-sentiment (winner of Stage 2 bake-off)",
+    "sentiment_scale": "(expected star - 3) / 2, range -1..+1; review sentences only",
+    "ci_method": "95% cluster bootstrap over listings, 2000 replicates, seed 42",
+    "languages": "English sentences only for aspects and topics; Japanese, Chinese, Korean reviews not covered",
+    "caveats": [
+      "Ward differences in aspect sentiment are small; prefer vs_tokyo over raw ranks.",
+      "Sentence-level nlptown accuracy is lower than review-level (3-class weighted accuracy about 0.83); about half of its negative flags are wrong.",
+      "Negative quotes were each read and kept only if truly negative and on-aspect; positive quotes were not individually checked.",
+      "Aspect tags are keyword-led; validated precision about 0.92 (weighted), weakest for shopping and safety.",
+      "vs_tokyo flags come from 110 separate 95% intervals with no multiple-comparison adjustment; a few may be chance.",
+      "Host overviews are promotional and used for mention share only.",
+      "Median price is JPY per night (the source marks it with $)."
+    ]
+  },
+  "structured": {
+    "listing_count": 1902,
+    "median_price": 21972.0,
+    "listings_with_price": 1756,
+    "mean_review_scores_location": 4.777,
+    "mean_review_scores_rating": 4.737,
+    "review_count": 75415,
+    "review_nlptown_coverage": 0.73,
+    "review_cjk_share": 0.24
+  },
+  "top_topics_by_lift": [
+    {
+      "topic_id": 23,
+      "label": "crossing / scramble / youth",
+      "top_words": [
+        "crossing",
+        "scramble",
+        "youth",
+        "shimokitazawa",
+        "intersection",
+        "hachiko"
+      ],
+      "share": 0.0656,
+      "lift": 4.8
+    },
+    {
+      "topic_id": 26,
+      "label": "garden / gyoen / park",
+      "top_words": [
+        "garden",
+        "gyoen",
+        "park",
+        "gardens",
+        "yoyogi",
+        "nature"
+      ],
+      "share": 0.0429,
+      "lift": 1.98
+    },
+    {
+      "topic_id": 3,
+      "label": "line / toei / sta",
+      "top_words": [
+        "line",
+        "toei",
+        "sta",
+        "oedo",
+        "jr",
+        "harajuku"
+      ],
+      "share": 0.1217,
+      "lift": 1.56
+    },
+    {
+      "topic_id": 15,
+      "label": "responsive / san / helpful",
+      "top_words": [
+        "responsive",
+        "san",
+        "helpful",
+        "host",
+        "kind",
+        "kyoko"
+      ],
+      "share": 0.0247,
+      "lift": 1.53
+    },
+    {
+      "topic_id": 21,
+      "label": "kabukicho / kagurazaka / golden",
+      "top_words": [
+        "kabukicho",
+        "kagurazaka",
+        "golden",
+        "nightlife",
+        "gai",
+        "entertainment"
+      ],
+      "share": 0.0198,
+      "lift": 1.47
+    }
+  ],
+  "top_topics_by_share": [
+    {
+      "topic_id": 3,
+      "label": "line / toei / sta",
+      "top_words": [
+        "line",
+        "toei",
+        "sta",
+        "oedo",
+        "jr",
+        "harajuku"
+      ],
+      "share": 0.1217,
+      "lift": 1.56
+    },
+    {
+      "topic_id": 0,
+      "label": "convenience / supermarkets / stores",
+      "top_words": [
+        "convenience",
+        "supermarkets",
+        "stores",
+        "supermarket",
+        "grocery",
+        "restaurants"
+      ],
+      "share": 0.106,
+      "lift": 1.21
+    },
+    {
+      "topic_id": 23,
+      "label": "crossing / scramble / youth",
+      "top_words": [
+        "crossing",
+        "scramble",
+        "youth",
+        "shimokitazawa",
+        "intersection",
+        "hachiko"
+      ],
+      "share": 0.0656,
+      "lift": 4.8
+    },
+    {
+      "topic_id": 1,
+      "label": "visiting / visit / come",
+      "top_words": [
+        "visiting",
+        "visit",
+        "come",
+        "return",
+        "standards",
+        "explore"
+      ],
+      "share": 0.0533,
+      "lift": 0.91
+    },
+    {
+      "topic_id": 26,
+      "label": "garden / gyoen / park",
+      "top_words": [
+        "garden",
+        "gyoen",
+        "park",
+        "gardens",
+        "yoyogi",
+        "nature"
+      ],
+      "share": 0.0429,
+      "lift": 1.98
+    }
+  ],
+  "aspects": {
+    "food_dining": {
+      "mean_sentiment": 0.581,
+      "ci_95": [
+        0.572,
+        0.5902
+      ],
+      "tokyo_mean": 0.5588,
+      "vs_tokyo": "above",
+      "review_mentions": 5096,
+      "overview_mentions": 393,
+      "listings_mentioning": 947,
+      "share_of_ward_review_mentions": 0.1266,
+      "share_by_source": {
+        "review": 0.9284,
+        "overview": 0.0716
+      },
+      "quotes": [
+        {
+          "text": "Perfect location so close to food, shopping and the train station.",
+          "polarity": "positive",
+          "expected_star": 4.87,
+          "text_id": "rev_493742204"
+        },
+        {
+          "text": "Great stay for our travel, close to the station and nearby restaurants and convenience stores.",
+          "polarity": "positive",
+          "expected_star": 4.68,
+          "text_id": "rev_1224300278627513986"
+        },
+        {
+          "text": "The neighborhood was centrally located and extremely walkable to great restaurants, parks, transportation, and attractions.",
+          "polarity": "positive",
+          "expected_star": 4.57,
+          "text_id": "rev_1393184941690590579"
+        }
+      ]
+    },
+    "nightlife": {
+      "mean_sentiment": 0.5108,
+      "ci_95": [
+        0.4867,
+        0.5363
+      ],
+      "tokyo_mean": 0.5179,
+      "vs_tokyo": "similar",
+      "review_mentions": 1040,
+      "overview_mentions": 95,
+      "listings_mentioning": 409,
+      "share_of_ward_review_mentions": 0.0258,
+      "share_by_source": {
+        "review": 0.9163,
+        "overview": 0.0837
+      },
+      "quotes": [
+        {
+          "text": "Perfect location in Shibuya for eating, going to clubs, exploring other parts of Tokyo.",
+          "polarity": "positive",
+          "expected_star": 4.76,
+          "text_id": "rev_1053316543125196656"
+        },
+        {
+          "text": "Everything you need is close including the train station, restaurants, bars markets and Yoyogi Park.",
+          "polarity": "positive",
+          "expected_star": 4.57,
+          "text_id": "rev_420183497"
+        },
+        {
+          "text": "There are a lot of great restaurants, bars and shopping nearby.",
+          "polarity": "positive",
+          "expected_star": 4.53,
+          "text_id": "rev_1129346422109797097"
+        },
+        {
+          "text": "The building has a bad smell, the toilet is not functioning, the neighborhood is noisy (expected as it’s a very central location surrounded with bars, etc).",
+          "polarity": "negative",
+          "expected_star": 1.46,
+          "text_id": "rev_1156181665402981276"
+        }
+      ]
+    },
+    "shopping": {
+      "mean_sentiment": 0.5767,
+      "ci_95": [
+        0.5622,
+        0.5904
+      ],
+      "tokyo_mean": 0.5575,
+      "vs_tokyo": "above",
+      "review_mentions": 1929,
+      "overview_mentions": 366,
+      "listings_mentioning": 654,
+      "share_of_ward_review_mentions": 0.0479,
+      "share_by_source": {
+        "review": 0.8405,
+        "overview": 0.1595
+      },
+      "quotes": [
+        {
+          "text": "The location is great and literally you can walk downstairs to all the shops and subways !",
+          "polarity": "positive",
+          "expected_star": 4.79,
+          "text_id": "rev_74915055"
+        },
+        {
+          "text": "a lot of café and shops, easy to reach, wonderful communication, we felt really so safe and accompanied.",
+          "polarity": "positive",
+          "expected_star": 4.77,
+          "text_id": "rev_306693205"
+        },
+        {
+          "text": "Our daughter was so happy she still had her travel /souvenir money to use.",
+          "polarity": "positive",
+          "expected_star": 4.67,
+          "text_id": "rev_1441787560091530158"
+        }
+      ]
+    },
+    "traditional_cultural": {
+      "mean_sentiment": 0.5479,
+      "ci_95": [
+        0.5179,
+        0.5771
+      ],
+      "tokyo_mean": 0.5485,
+      "vs_tokyo": "similar",
+      "review_mentions": 377,
+      "overview_mentions": 219,
+      "listings_mentioning": 191,
+      "share_of_ward_review_mentions": 0.0094,
+      "share_by_source": {
+        "review": 0.6326,
+        "overview": 0.3674
+      },
+      "quotes": [
+        {
+          "text": "We even walked from the house through Shinjuku and to Shibuya via the Meiji shrine one day because it was super nice out without any trouble.",
+          "polarity": "positive",
+          "expected_star": 4.75,
+          "text_id": "rev_605625840"
+        },
+        {
+          "text": "The futon in the tatami room was very comfortable and perfect for a good night's sleep.",
+          "polarity": "positive",
+          "expected_star": 4.56,
+          "text_id": "rev_36998665"
+        },
+        {
+          "text": "We tried out old/traditional homes and Ryokans in Kyoto and Takayama and now have a totally new level of appreciation to how wonderful Yuki's place is.",
+          "polarity": "positive",
+          "expected_star": 4.52,
+          "text_id": "rev_254978676"
+        }
+      ]
+    },
+    "family_friendliness": {
+      "mean_sentiment": 0.5648,
+      "ci_95": [
+        0.5449,
+        0.5833
+      ],
+      "tokyo_mean": 0.5704,
+      "vs_tokyo": "similar",
+      "review_mentions": 2193,
+      "overview_mentions": 32,
+      "listings_mentioning": 551,
+      "share_of_ward_review_mentions": 0.0545,
+      "share_by_source": {
+        "review": 0.9856,
+        "overview": 0.0144
+      },
+      "quotes": [
+        {
+          "text": "We would come again: Perfect for our family of 3!",
+          "polarity": "positive",
+          "expected_star": 4.81,
+          "text_id": "rev_1438076617577167855"
+        },
+        {
+          "text": "My family of 5 felt right at home and was very comfortable!",
+          "polarity": "positive",
+          "expected_star": 4.7,
+          "text_id": "rev_1323569829999290918"
+        },
+        {
+          "text": "Mitsuko's flat was amazing for my family of three.",
+          "polarity": "positive",
+          "expected_star": 4.51,
+          "text_id": "rev_812686403874160617"
+        },
+        {
+          "text": "Extremely noisy place even in midnight (not recommended for families with elderly or kids) .",
+          "polarity": "negative",
+          "expected_star": 1.36,
+          "text_id": "rev_1407736140729960097"
+        }
+      ]
+    },
+    "nature_parks": {
+      "mean_sentiment": 0.599,
+      "ci_95": [
+        0.5755,
+        0.6189
+      ],
+      "tokyo_mean": 0.5845,
+      "vs_tokyo": "similar",
+      "review_mentions": 609,
+      "overview_mentions": 236,
+      "listings_mentioning": 269,
+      "share_of_ward_review_mentions": 0.0151,
+      "share_by_source": {
+        "review": 0.7207,
+        "overview": 0.2793
+      },
+      "quotes": [
+        {
+          "text": "Walked around and was blessed to see two cherry blossom trees in bloom right by the airbnb!",
+          "polarity": "positive",
+          "expected_star": 4.67,
+          "text_id": "rev_1375048345979011793"
+        },
+        {
+          "text": "Also love that there is a park near the place where we can chill.",
+          "polarity": "positive",
+          "expected_star": 4.51,
+          "text_id": "rev_1072084359256407374"
+        },
+        {
+          "text": "Restaurants & konbinis in all directions down both streets, large LIFE supermarket in the B1 floor of Ebisu Garden Place (6 min walk) in a shopping mall.",
+          "polarity": "positive",
+          "expected_star": 4.51,
+          "text_id": "rev_1409822622046583398"
+        }
+      ]
+    },
+    "walkability_transit": {
+      "mean_sentiment": 0.4985,
+      "ci_95": [
+        0.4903,
+        0.5062
+      ],
+      "tokyo_mean": 0.4946,
+      "vs_tokyo": "similar",
+      "review_mentions": 10206,
+      "overview_mentions": 745,
+      "listings_mentioning": 1199,
+      "share_of_ward_review_mentions": 0.2536,
+      "share_by_source": {
+        "review": 0.932,
+        "overview": 0.068
+      },
+      "quotes": [
+        {
+          "text": "Close to Ebisu station and many cafes and restaurants, we loved our stay.",
+          "polarity": "positive",
+          "expected_star": 4.67,
+          "text_id": "rev_1166373495657436178"
+        },
+        {
+          "text": "The location is amazing, just a 10 min walk from Hatagaya station which makes exploring the city very easy.",
+          "polarity": "positive",
+          "expected_star": 4.66,
+          "text_id": "rev_972070281785380189"
+        },
+        {
+          "text": "There are multiple metro stations just 2mins from accommodation, as well as an amazing park in walking distance.",
+          "polarity": "positive",
+          "expected_star": 4.63,
+          "text_id": "rev_1192440494201777662"
+        }
+      ]
+    },
+    "safety": {
+      "mean_sentiment": 0.5676,
+      "ci_95": [
+        0.5312,
+        0.6022
+      ],
+      "tokyo_mean": 0.563,
+      "vs_tokyo": "similar",
+      "review_mentions": 545,
+      "overview_mentions": 17,
+      "listings_mentioning": 354,
+      "share_of_ward_review_mentions": 0.0135,
+      "share_by_source": {
+        "review": 0.9698,
+        "overview": 0.0302
+      },
+      "quotes": [
+        {
+          "text": "we were really well looked after!, feels very safe as a solo traveller and/or couple.",
+          "polarity": "positive",
+          "expected_star": 4.67,
+          "text_id": "rev_1098937453650777719"
+        },
+        {
+          "text": "I felt completely safe as well since I traveled alone.",
+          "polarity": "positive",
+          "expected_star": 4.52,
+          "text_id": "rev_351224855"
+        },
+        {
+          "text": "And the local villages of Sangubashi (5 min walk) and Yoyogi (10 min walk) are quaint, safe and full of yummy traditional experiences to enjoy.",
+          "polarity": "positive",
+          "expected_star": 4.52,
+          "text_id": "rev_340160913"
+        }
+      ]
+    },
+    "accommodation_value": {
+      "mean_sentiment": 0.5147,
+      "ci_95": [
+        0.5012,
+        0.5278
+      ],
+      "tokyo_mean": 0.5215,
+      "vs_tokyo": "similar",
+      "review_mentions": 13039,
+      "overview_mentions": 55,
+      "listings_mentioning": 1250,
+      "share_of_ward_review_mentions": 0.324,
+      "share_by_source": {
+        "review": 0.9958,
+        "overview": 0.0042
+      },
+      "quotes": [
+        {
+          "text": "The apartment itself was really clean, well-stocked, and has all things you would need.",
+          "polarity": "positive",
+          "expected_star": 4.67,
+          "text_id": "rev_1236686530819873880"
+        },
+        {
+          "text": "the apartment itself is quite spacious and clean, perfect for our group of 6.",
+          "polarity": "positive",
+          "expected_star": 4.56,
+          "text_id": "rev_893861530998172040"
+        },
+        {
+          "text": "All of the amenities were great.",
+          "polarity": "positive",
+          "expected_star": 4.5,
+          "text_id": "rev_1011959704663279845"
+        },
+        {
+          "text": "Was not clean, hair was on the floor, the glasses were dirty.",
+          "polarity": "negative",
+          "expected_star": 1.47,
+          "text_id": "rev_701746809937695410"
+        },
+        {
+          "text": "The reason, why i'm taking away one star are the beds.",
+          "polarity": "negative",
+          "expected_star": 1.06,
+          "text_id": "rev_1275114885506418132"
+        }
+      ]
+    },
+    "crowd_level": {
+      "mean_sentiment": 0.4739,
+      "ci_95": [
+        0.4556,
+        0.4916
+      ],
+      "tokyo_mean": 0.4903,
+      "vs_tokyo": "similar",
+      "review_mentions": 5209,
+      "overview_mentions": 187,
+      "listings_mentioning": 1008,
+      "share_of_ward_review_mentions": 0.1294,
+      "share_by_source": {
+        "review": 0.9653,
+        "overview": 0.0347
+      },
+      "quotes": [
+        {
+          "text": "Located in a quiet area and super close to the train and the mini marts.",
+          "polarity": "positive",
+          "expected_star": 4.6,
+          "text_id": "rev_1208371527647260534"
+        },
+        {
+          "text": "Great location, down a quiet street.",
+          "polarity": "positive",
+          "expected_star": 4.58,
+          "text_id": "rev_1406231367694934793"
+        },
+        {
+          "text": "the area is beautiful and very quiet, so close to the city and transport hubs",
+          "polarity": "positive",
+          "expected_star": 4.56,
+          "text_id": "rev_1343191785275206938"
+        },
+        {
+          "text": "All in all, I wouldn't book the apartment again, it's very noisy and",
+          "polarity": "negative",
+          "expected_star": 1.49,
+          "text_id": "rev_1121352933998795765"
+        },
+        {
+          "text": "The noise level in the room was horrible, clinking dishes and loud laughter from downstairs sounding like it was in the room with us.",
+          "polarity": "negative",
+          "expected_star": 1.44,
+          "text_id": "rev_1056864667211362060"
+        }
+      ]
+    }
+  }
+}

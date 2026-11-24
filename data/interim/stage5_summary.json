@@ -1,0 +1,44 @@
+{
+  "n_wards": 11,
+  "vs_tokyo_counts": {
+    "similar": 59,
+    "below": 27,
+    "above": 24
+  },
+  "quotes_selected": 366,
+  "face_validity": [
+    {
+      "expectation": "Taito has the highest traditional/cultural mention share",
+      "pass": true
+    },
+    {
+      "expectation": "Shinjuku, Shibuya or Minato in the top 3 for nightlife mention share",
+      "pass": true
+    },
+    {
+      "expectation": "Taito or Sumida top-3 lift topics mention temple / sensoji / skytree",
+      "pass": true
+    },
+    {
+      "expectation": "Shibuya top-3 lift topics mention crossing / scramble",
+      "pass": true
+    },
+    {
+      "expectation": "Toshima top-3 lift topics mention ikebukuro / anime",
+      "pass": true
+    },
+    {
+      "expectation": "Itabashi is in the bottom 3 for walkability sentiment (most outlying ward)",
+      "pass": true
+    },
+    {
+      "expectation": "Chuo, Chiyoda or Minato has the highest median price",
+      "pass": true
+    },
+    {
+      "expectation": "Itabashi has the lowest median price",
+      "pass": true
+    }
+  ],
+  "rho_location_vs_walkability": 0.873
+}

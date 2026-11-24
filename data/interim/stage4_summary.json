@@ -1,0 +1,30 @@
+{
+  "n_units": 42147,
+  "n_assignments": 360044,
+  "units_with_aspect": 281407,
+  "by_path": {
+    "keyword": 358475,
+    "topic+embedding": 1466,
+    "embedding": 103
+  },
+  "tau_topic": 0.4,
+  "tau_emb": 0.55,
+  "topic_ok": [
+    "accommodation_value",
+    "nature_parks",
+    "traditional_cultural",
+    "walkability_transit"
+  ],
+  "emb_ok": [
+    "accommodation_value",
+    "crowd_level",
+    "walkability_transit"
+  ],
+  "ext_cap_per_ward": 30000,
+  "by_sample": {
+    "extension": 326369,
+    "core": 33675
+  },
+  "thin_cells": 0,
+  "scores_real": true
+}

@@ -1,0 +1,328 @@
+{
+  "seed": 42,
+  "labelset_n": 300,
+  "labelset_design": {
+    "EN": {
+      "neg": 80,
+      "neu": 40,
+      "pos": 120
+    },
+    "non_EN": {
+      "FR": 20,
+      "ES": 14,
+      "DE": 14,
+      "IT": 6,
+      "NL": 6
+    }
+  },
+  "vader5_edges": [
+    -0.6,
+    -0.2,
+    0.2,
+    0.6
+  ],
+  "external_check": [
+    {
+      "signal": "VADER compound, all English reviews",
+      "n_listings": 11803,
+      "rho_rating": 0.6233,
+      "p_rating": 0.0,
+      "rho_location": 0.3789,
+      "p_location": 0.0
+    },
+    {
+      "signal": "VADER compound, Colab subsample (EN only)",
+      "n_listings": 2979,
+      "rho_rating": 0.513,
+      "p_rating": 0.0,
+      "rho_location": 0.3031,
+      "p_location": 0.0
+    },
+    {
+      "signal": "nlptown expected star, Colab subsample",
+      "n_listings": 3086,
+      "rho_rating": 0.668,
+      "p_rating": 0.0,
+      "rho_location": 0.4222,
+      "p_location": 0.0
+    },
+    {
+      "signal": "cardiff P(pos)-P(neg), Colab subsample (EN only)",
+      "n_listings": 2979,
+      "rho_rating": 0.5792,
+      "p_rating": 0.0,
+      "rho_location": 0.3652,
+      "p_location": 0.0
+    }
+  ],
+  "llm_label_dist": {
+    "1": 15,
+    "2": 33,
+    "3": 51,
+    "4": 83,
+    "5": 118
+  },
+  "results_3class": [
+    {
+      "index": "VADER (EN)",
+      "n": 240.0,
+      "accuracy": 0.717,
+      "weighted_f1": 0.724,
+      "macro_f1": 0.635,
+      "qwk": 0.678
+    },
+    {
+      "index": "nlptown (EN)",
+      "n": 240.0,
+      "accuracy": 0.858,
+      "weighted_f1": 0.854,
+      "macro_f1": 0.805,
+      "qwk": 0.85
+    },
+    {
+      "index": "nlptown (non-EN)",
+      "n": 60.0,
+      "accuracy": 0.917,
+      "weighted_f1": 0.909,
+      "macro_f1": 0.654,
+      "qwk": 0.635
+    },
+    {
+      "index": "nlptown (all 300)",
+      "n": 300.0,
+      "accuracy": 0.87,
+      "weighted_f1": 0.865,
+      "macro_f1": 0.8,
+      "qwk": 0.844
+    },
+    {
+      "index": "cardiff (EN)",
+      "n": 240.0,
+      "accuracy": 0.858,
+      "weighted_f1": 0.852,
+      "macro_f1": 0.792,
+      "qwk": 0.853
+    }
+  ],
+  "results_5class": [
+    {
+      "index": "VADER (EN)",
+      "n": 240.0,
+      "accuracy": 0.579,
+      "weighted_f1": 0.537,
+      "mae": 0.529,
+      "qwk": 0.785
+    },
+    {
+      "index": "nlptown (EN)",
+      "n": 240.0,
+      "accuracy": 0.667,
+      "weighted_f1": 0.669,
+      "mae": 0.375,
+      "qwk": 0.844
+    },
+    {
+      "index": "nlptown (non-EN)",
+      "n": 60.0,
+      "accuracy": 0.75,
+      "weighted_f1": 0.733,
+      "mae": 0.267,
+      "qwk": 0.779
+    },
+    {
+      "index": "nlptown (all 300)",
+      "n": 300.0,
+      "accuracy": 0.683,
+      "weighted_f1": 0.681,
+      "mae": 0.353,
+      "qwk": 0.845
+    }
+  ],
+  "winner_rule": "3-class weighted F1, English set",
+  "winner_current": "nlptown (EN)",
+  "weighted": {
+    "kish_ess": 82.49089006634,
+    "table": [
+      {
+        "model": "VADER",
+        "task": "5-class",
+        "metric": "accuracy",
+        "unweighted": 0.579,
+        "weighted": 0.709,
+        "w_ci_low": 0.604,
+        "w_ci_high": 0.801
+      },
+      {
+        "model": "VADER",
+        "task": "5-class",
+        "metric": "weighted_f1",
+        "unweighted": 0.537,
+        "weighted": 0.658,
+        "w_ci_low": 0.526,
+        "w_ci_high": 0.771
+      },
+      {
+        "model": "VADER",
+        "task": "5-class",
+        "metric": "qwk",
+        "unweighted": 0.785,
+        "weighted": 0.538,
+        "w_ci_low": 0.381,
+        "w_ci_high": 0.692
+      },
+      {
+        "model": "VADER",
+        "task": "5-class",
+        "metric": "mae",
+        "unweighted": 0.529,
+        "weighted": 0.332,
+        "w_ci_low": 0.217,
+        "w_ci_high": 0.464
+      },
+      {
+        "model": "VADER",
+        "task": "3-class",
+        "metric": "accuracy",
+        "unweighted": 0.717,
+        "weighted": 0.921,
+        "w_ci_low": 0.86,
+        "w_ci_high": 0.966
+      },
+      {
+        "model": "VADER",
+        "task": "3-class",
+        "metric": "weighted_f1",
+        "unweighted": 0.724,
+        "weighted": 0.902,
+        "w_ci_low": 0.816,
+        "w_ci_high": 0.965
+      },
+      {
+        "model": "VADER",
+        "task": "3-class",
+        "metric": "qwk",
+        "unweighted": 0.678,
+        "weighted": 0.569,
+        "w_ci_low": 0.408,
+        "w_ci_high": 0.749
+      },
+      {
+        "model": "VADER",
+        "task": "3-class",
+        "metric": "macro_f1",
+        "unweighted": 0.635,
+        "weighted": 0.601,
+        "w_ci_low": 0.536,
+        "w_ci_high": 0.686
+      },
+      {
+        "model": "nlptown",
+        "task": "5-class",
+        "metric": "accuracy",
+        "unweighted": 0.667,
+        "weighted": 0.754,
+        "w_ci_low": 0.663,
+        "w_ci_high": 0.841
+      },
+      {
+        "model": "nlptown",
+        "task": "5-class",
+        "metric": "weighted_f1",
+        "unweighted": 0.669,
+        "weighted": 0.758,
+        "w_ci_low": 0.666,
+        "w_ci_high": 0.843
+      },
+      {
+        "model": "nlptown",
+        "task": "5-class",
+        "metric": "qwk",
+        "unweighted": 0.844,
+        "weighted": 0.698,
+        "w_ci_low": 0.543,
+        "w_ci_high": 0.814
+      },
+      {
+        "model": "nlptown",
+        "task": "5-class",
+        "metric": "mae",
+        "unweighted": 0.375,
+        "weighted": 0.261,
+        "w_ci_low": 0.167,
+        "w_ci_high": 0.361
+      },
+      {
+        "model": "nlptown",
+        "task": "3-class",
+        "metric": "accuracy",
+        "unweighted": 0.858,
+        "weighted": 0.952,
+        "w_ci_low": 0.907,
+        "w_ci_high": 0.986
+      },
+      {
+        "model": "nlptown",
+        "task": "3-class",
+        "metric": "weighted_f1",
+        "unweighted": 0.854,
+        "weighted": 0.95,
+        "w_ci_low": 0.898,
+        "w_ci_high": 0.986
+      },
+      {
+        "model": "nlptown",
+        "task": "3-class",
+        "metric": "qwk",
+        "unweighted": 0.85,
+        "weighted": 0.781,
+        "w_ci_low": 0.597,
+        "w_ci_high": 0.924
+      },
+      {
+        "model": "nlptown",
+        "task": "3-class",
+        "metric": "macro_f1",
+        "unweighted": 0.805,
+        "weighted": 0.814,
+        "w_ci_low": 0.663,
+        "w_ci_high": 0.913
+      },
+      {
+        "model": "cardiff",
+        "task": "3-class",
+        "metric": "accuracy",
+        "unweighted": 0.858,
+        "weighted": 0.935,
+        "w_ci_low": 0.874,
+        "w_ci_high": 0.981
+      },
+      {
+        "model": "cardiff",
+        "task": "3-class",
+        "metric": "weighted_f1",
+        "unweighted": 0.852,
+        "weighted": 0.914,
+        "w_ci_low": 0.827,
+        "w_ci_high": 0.977
+      },
+      {
+        "model": "cardiff",
+        "task": "3-class",
+        "metric": "qwk",
+        "unweighted": 0.853,
+        "weighted": 0.609,
+        "w_ci_low": 0.418,
+        "w_ci_high": 0.829
+      },
+      {
+        "model": "cardiff",
+        "task": "3-class",
+        "metric": "macro_f1",
+        "unweighted": 0.792,
+        "weighted": 0.666,
+        "w_ci_low": 0.594,
+        "w_ci_high": 0.781
+      }
+    ]
+  }
+}

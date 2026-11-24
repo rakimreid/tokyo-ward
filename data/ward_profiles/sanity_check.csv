@@ -1,0 +1,12 @@
+ward,listing_count,median_price,mean_review_scores_location,review_cjk_share,aspects_above_tokyo,aspects_below_tokyo,top_topic_by_lift,quotes_total,aspects_with_<3_quotes
+Shinjuku,4991,17994.0,4.757109393300539,0.279357919580034,"nightlife, walkability_transit","accommodation_value, crowd_level, family_friendliness, safety, traditional_cultural",shinokubo / okubo / korean,33,0
+Shibuya,1902,21972.0,4.776895485466914,0.23974010475369623,"food_dining, shopping",-,crossing / scramble / youth,36,0
+Taito,2950,19967.0,4.705422153369481,0.3773304212958567,"accommodation_value, crowd_level, nature_parks",-,temple / asakusa / gate,33,0
+Chuo,382,25429.0,4.756121212121212,0.3359278803869833,"safety, walkability_transit",crowd_level,foot / store / seveneleven,34,0
+Chiyoda,259,22374.0,4.820163934426229,0.3535952557449963,walkability_transit,"accommodation_value, crowd_level, traditional_cultural",anime / ikebukuro / manga,33,0
+Minato,1190,24293.0,4.809558359621452,0.28994571335651564,"safety, walkability_transit",family_friendliness,observation / deck / view,33,0
+Sumida,3985,15082.0,4.725673529411765,0.40923998178857773,crowd_level,"food_dining, nightlife, shopping, walkability_transit",observation / deck / view,32,0
+Koto,548,14667.0,4.701837160751565,0.3757428070625454,"accommodation_value, crowd_level","food_dining, nightlife, shopping",museum / sumo / km,33,0
+Toshima,2749,14852.5,4.69251389482685,0.4408217839602993,-,"accommodation_value, food_dining, nature_parks, nightlife, safety, shopping, traditional_cultural, walkability_transit",anime / ikebukuro / manga,33,0
+Setagaya,912,12910.0,4.7564076433121025,0.3376799222912313,"accommodation_value, crowd_level, family_friendliness, food_dining, nightlife, safety, shopping",-,crossing / scramble / youth,31,0
+Itabashi,502,12180.0,4.65858123569794,0.4207552016439764,"accommodation_value, crowd_level","food_dining, walkability_transit",anime / ikebukuro / manga,35,0

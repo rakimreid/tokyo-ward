@@ -1,0 +1,564 @@
+{
+  "ward": "Taito",
+  "meta": {
+    "source": "Inside Airbnb Tokyo, snapshot 2025-09-29 (scraped 29-30 Sep 2025)",
+    "scope": "11 wards; Airbnb listings and reviews only",
+    "sentiment_model": "nlptown/bert-base-multilingual-uncased-sentiment (winner of Stage 2 bake-off)",
+    "sentiment_scale": "(expected star - 3) / 2, range -1..+1; review sentences only",
+    "ci_method": "95% cluster bootstrap over listings, 2000 replicates, seed 42",
+    "languages": "English sentences only for aspects and topics; Japanese, Chinese, Korean reviews not covered",
+    "caveats": [
+      "Ward differences in aspect sentiment are small; prefer vs_tokyo over raw ranks.",
+      "Sentence-level nlptown accuracy is lower than review-level (3-class weighted accuracy about 0.83); about half of its negative flags are wrong.",
+      "Negative quotes were each read and kept only if truly negative and on-aspect; positive quotes were not individually checked.",
+      "Aspect tags are keyword-led; validated precision about 0.92 (weighted), weakest for shopping and safety.",
+      "vs_tokyo flags come from 110 separate 95% intervals with no multiple-comparison adjustment; a few may be chance.",
+      "Host overviews are promotional and used for mention share only.",
+      "Median price is JPY per night (the source marks it with $)."
+    ]
+  },
+  "structured": {
+    "listing_count": 2950,
+    "median_price": 19967.0,
+    "listings_with_price": 2613,
+    "mean_review_scores_location": 4.705,
+    "mean_review_scores_rating": 4.738,
+    "review_count": 126372,
+    "review_nlptown_coverage": 0.582,
+    "review_cjk_share": 0.377
+  },
+  "top_topics_by_lift": [
+    {
+      "topic_id": 19,
+      "label": "temple / asakusa / gate",
+      "top_words": [
+        "temple",
+        "asakusa",
+        "gate",
+        "sensoji",
+        "kaminarimon",
+        "temples"
+      ],
+      "share": 0.096,
+      "lift": 3.66
+    },
+    {
+      "topic_id": 36,
+      "label": "museum / sumo / km",
+      "top_words": [
+        "museum",
+        "sumo",
+        "km",
+        "art",
+        "national",
+        "zoo"
+      ],
+      "share": 0.0428,
+      "lift": 2.34
+    },
+    {
+      "topic_id": 22,
+      "label": "tree / sky / sensoji",
+      "top_words": [
+        "tree",
+        "sky",
+        "sensoji",
+        "temple",
+        "skytree",
+        "meiji"
+      ],
+      "share": 0.0507,
+      "lift": 1.51
+    },
+    {
+      "topic_id": 17,
+      "label": "early / luggage / check",
+      "top_words": [
+        "early",
+        "luggage",
+        "check",
+        "leave",
+        "checkout",
+        "checkin"
+      ],
+      "share": 0.0199,
+      "lift": 1.32
+    },
+    {
+      "topic_id": 31,
+      "label": "airport / narita / haneda",
+      "top_words": [
+        "airport",
+        "narita",
+        "haneda",
+        "approximately",
+        "transfers",
+        "hour"
+      ],
+      "share": 0.0282,
+      "lift": 1.32
+    }
+  ],
+  "top_topics_by_share": [
+    {
+      "topic_id": 19,
+      "label": "temple / asakusa / gate",
+      "top_words": [
+        "temple",
+        "asakusa",
+        "gate",
+        "sensoji",
+        "kaminarimon",
+        "temples"
+      ],
+      "share": 0.096,
+      "lift": 3.66
+    },
+    {
+      "topic_id": 0,
+      "label": "convenience / supermarkets / stores",
+      "top_words": [
+        "convenience",
+        "supermarkets",
+        "stores",
+        "supermarket",
+        "grocery",
+        "restaurants"
+      ],
+      "share": 0.0781,
+      "lift": 0.89
+    },
+    {
+      "topic_id": 11,
+      "label": "foot / store / seveneleven",
+      "top_words": [
+        "foot",
+        "store",
+        "seveneleven",
+        "shop",
+        "supermarket",
+        "lawson"
+      ],
+      "share": 0.0567,
+      "lift": 1.22
+    },
+    {
+      "topic_id": 1,
+      "label": "visiting / visit / come",
+      "top_words": [
+        "visiting",
+        "visit",
+        "come",
+        "return",
+        "standards",
+        "explore"
+      ],
+      "share": 0.0518,
+      "lift": 0.89
+    },
+    {
+      "topic_id": 22,
+      "label": "tree / sky / sensoji",
+      "top_words": [
+        "tree",
+        "sky",
+        "sensoji",
+        "temple",
+        "skytree",
+        "meiji"
+      ],
+      "share": 0.0507,
+      "lift": 1.51
+    }
+  ],
+  "aspects": {
+    "food_dining": {
+      "mean_sentiment": 0.552,
+      "ci_95": [
+        0.5406,
+        0.563
+      ],
+      "tokyo_mean": 0.5588,
+      "vs_tokyo": "similar",
+      "review_mentions": 3518,
+      "overview_mentions": 264,
+      "listings_mentioning": 1086,
+      "share_of_ward_review_mentions": 0.0905,
+      "share_by_source": {
+        "review": 0.9302,
+        "overview": 0.0698
+      },
+      "quotes": [
+        {
+          "text": "Easy walk to Senjosi Tenple, Don Q, unique shops and great restaurants.",
+          "polarity": "positive",
+          "expected_star": 4.73,
+          "text_id": "rev_1122843616762085115"
+        },
+        {
+          "text": "The takoyaki restaurant nearby is the best we had throughout our trip in Japan.",
+          "polarity": "positive",
+          "expected_star": 4.57,
+          "text_id": "rev_984373338209194996"
+        },
+        {
+          "text": "Grocery store a block away, lovely little coffee shop down the road.",
+          "polarity": "positive",
+          "expected_star": 4.51,
+          "text_id": "rev_1119223472477476506"
+        },
+        {
+          "text": "the sushi we had was not up to standard, tbh the worst we have in Japan.",
+          "polarity": "negative",
+          "expected_star": 1.39,
+          "text_id": "rev_866262336671096217"
+        }
+      ]
+    },
+    "nightlife": {
+      "mean_sentiment": 0.5037,
+      "ci_95": [
+        0.4464,
+        0.5542
+      ],
+      "tokyo_mean": 0.5179,
+      "vs_tokyo": "similar",
+      "review_mentions": 282,
+      "overview_mentions": 20,
+      "listings_mentioning": 191,
+      "share_of_ward_review_mentions": 0.0073,
+      "share_by_source": {
+        "review": 0.9338,
+        "overview": 0.0662
+      },
+      "quotes": [
+        {
+          "text": "make sure to try some of his cocktails at the bar below, he's very talented!",
+          "polarity": "positive",
+          "expected_star": 4.61,
+          "text_id": "rev_1313522286290508146"
+        },
+        {
+          "text": "There is a bar is also open to everyone and it has a great setting just to meet and get to know other people!",
+          "polarity": "positive",
+          "expected_star": 4.61,
+          "text_id": "rev_1094646282999395689"
+        },
+        {
+          "text": "We actually found our favorite coffee spot called Unlimited Coffee Bar just up the street near the Sky Tree.",
+          "polarity": "positive",
+          "expected_star": 4.51,
+          "text_id": "rev_70488161"
+        }
+      ]
+    },
+    "shopping": {
+      "mean_sentiment": 0.5566,
+      "ci_95": [
+        0.5409,
+        0.5718
+      ],
+      "tokyo_mean": 0.5575,
+      "vs_tokyo": "similar",
+      "review_mentions": 1419,
+      "overview_mentions": 344,
+      "listings_mentioning": 707,
+      "share_of_ward_review_mentions": 0.0365,
+      "share_by_source": {
+        "review": 0.8049,
+        "overview": 0.1951
+      },
+      "quotes": [
+        {
+          "text": "Location is excellent and near all the restaurants, public transport and shopping areas.",
+          "polarity": "positive",
+          "expected_star": 4.77,
+          "text_id": "rev_1054677010505610801"
+        },
+        {
+          "text": "The apartment was very comfortable and perfectly located close to many restaurants, shops, and attractions.",
+          "polarity": "positive",
+          "expected_star": 4.75,
+          "text_id": "rev_1409178605835483149"
+        },
+        {
+          "text": "Lots to do in the area, great restaurants and there’s a 24hours don Quijote nearby.",
+          "polarity": "positive",
+          "expected_star": 4.53,
+          "text_id": "rev_1357647476079023476"
+        }
+      ]
+    },
+    "traditional_cultural": {
+      "mean_sentiment": 0.5523,
+      "ci_95": [
+        0.5384,
+        0.5661
+      ],
+      "tokyo_mean": 0.5485,
+      "vs_tokyo": "similar",
+      "review_mentions": 2290,
+      "overview_mentions": 611,
+      "listings_mentioning": 723,
+      "share_of_ward_review_mentions": 0.0589,
+      "share_by_source": {
+        "review": 0.7894,
+        "overview": 0.2106
+      },
+      "quotes": [
+        {
+          "text": "The Airbnb in Asakusa was perfectly situated, within walking distance of Senso-ji Temple and other popular attractions.",
+          "polarity": "positive",
+          "expected_star": 4.65,
+          "text_id": "rev_1295391813421464426"
+        },
+        {
+          "text": "very convenient for Sensoji temple (5mins walk) and Skytree (20mins walk).",
+          "polarity": "positive",
+          "expected_star": 4.56,
+          "text_id": "rev_202335847"
+        },
+        {
+          "text": "Great place to stay next to the temple, Elaine was very responsive and the front staff at the hotel were very accomodating to our needs regarding luggage drop off.",
+          "polarity": "positive",
+          "expected_star": 4.55,
+          "text_id": "rev_1040965226048470870"
+        }
+      ]
+    },
+    "family_friendliness": {
+      "mean_sentiment": 0.5788,
+      "ci_95": [
+        0.5632,
+        0.5941
+      ],
+      "tokyo_mean": 0.5704,
+      "vs_tokyo": "similar",
+      "review_mentions": 2330,
+      "overview_mentions": 33,
+      "listings_mentioning": 770,
+      "share_of_ward_review_mentions": 0.0599,
+      "share_by_source": {
+        "review": 0.986,
+        "overview": 0.014
+      },
+      "quotes": [
+        {
+          "text": "We are a family of five (3 x generations) Airi’s place was absolutely perfect for us, everything was exactly as listed and so much more.",
+          "polarity": "positive",
+          "expected_star": 4.89,
+          "text_id": "rev_982294773402626163"
+        },
+        {
+          "text": "This AirBNB was perfect for our family of 4",
+          "polarity": "positive",
+          "expected_star": 4.8,
+          "text_id": "rev_139923786"
+        },
+        {
+          "text": "My family and friends stayed there very comfortably.",
+          "polarity": "positive",
+          "expected_star": 4.61,
+          "text_id": "rev_1107695420385813672"
+        }
+      ]
+    },
+    "nature_parks": {
+      "mean_sentiment": 0.6078,
+      "ci_95": [
+        0.5879,
+        0.6257
+      ],
+      "tokyo_mean": 0.5845,
+      "vs_tokyo": "above",
+      "review_mentions": 720,
+      "overview_mentions": 200,
+      "listings_mentioning": 417,
+      "share_of_ward_review_mentions": 0.0185,
+      "share_by_source": {
+        "review": 0.7826,
+        "overview": 0.2174
+      },
+      "quotes": [
+        {
+          "text": "Also within 15 min walk to a great park and a lively street with plenty of great restaurants.",
+          "polarity": "positive",
+          "expected_star": 4.79,
+          "text_id": "rev_1095257665827630675"
+        },
+        {
+          "text": "Great place to stay very close to sumida park and Asakusa temple .",
+          "polarity": "positive",
+          "expected_star": 4.73,
+          "text_id": "rev_714439400"
+        },
+        {
+          "text": "Great atmosphere, scenic garden and guesthouse, staff extremely welcoming and helpful",
+          "polarity": "positive",
+          "expected_star": 4.68,
+          "text_id": "rev_874954837154327507"
+        }
+      ]
+    },
+    "walkability_transit": {
+      "mean_sentiment": 0.4876,
+      "ci_95": [
+        0.48,
+        0.4957
+      ],
+      "tokyo_mean": 0.4946,
+      "vs_tokyo": "similar",
+      "review_mentions": 10224,
+      "overview_mentions": 501,
+      "listings_mentioning": 1694,
+      "share_of_ward_review_mentions": 0.263,
+      "share_by_source": {
+        "review": 0.9533,
+        "overview": 0.0467
+      },
+      "quotes": [
+        {
+          "text": "Amazingly connected, just 15 minutes away from Ueno Station.",
+          "polarity": "positive",
+          "expected_star": 4.9,
+          "text_id": "rev_1503342617216971396"
+        },
+        {
+          "text": "The location is superb, its just exactly on the exit of Metro Minowa Station.",
+          "polarity": "positive",
+          "expected_star": 4.63,
+          "text_id": "rev_1080848489279260114"
+        },
+        {
+          "text": "It is a spacious place, everything is fine, near hot spots and Metro station, the host is very nice,we really enjoyed our stay.",
+          "polarity": "positive",
+          "expected_star": 4.55,
+          "text_id": "rev_409478389"
+        }
+      ]
+    },
+    "safety": {
+      "mean_sentiment": 0.555,
+      "ci_95": [
+        0.5167,
+        0.5865
+      ],
+      "tokyo_mean": 0.563,
+      "vs_tokyo": "similar",
+      "review_mentions": 488,
+      "overview_mentions": 21,
+      "listings_mentioning": 330,
+      "share_of_ward_review_mentions": 0.0126,
+      "share_by_source": {
+        "review": 0.9587,
+        "overview": 0.0413
+      },
+      "quotes": [
+        {
+          "text": "I’ve felt safe my whole stay and even",
+          "polarity": "positive",
+          "expected_star": 4.67,
+          "text_id": "rev_1428046387613461665"
+        },
+        {
+          "text": "Nice, safe, clean and Tora is very easy to reach even it is late.",
+          "polarity": "positive",
+          "expected_star": 4.62,
+          "text_id": "rev_1521482845559393908"
+        },
+        {
+          "text": "Clean, safe and well taken care of.",
+          "polarity": "positive",
+          "expected_star": 4.6,
+          "text_id": "rev_909761426584781592"
+        }
+      ]
+    },
+    "accommodation_value": {
+      "mean_sentiment": 0.5325,
+      "ci_95": [
+        0.523,
+        0.5421
+      ],
+      "tokyo_mean": 0.5215,
+      "vs_tokyo": "above",
+      "review_mentions": 13518,
+      "overview_mentions": 51,
+      "listings_mentioning": 1815,
+      "share_of_ward_review_mentions": 0.3477,
+      "share_by_source": {
+        "review": 0.9962,
+        "overview": 0.0038
+      },
+      "quotes": [
+        {
+          "text": "Great value for money compared to other accommodation in the area.",
+          "polarity": "positive",
+          "expected_star": 4.63,
+          "text_id": "rev_1089531845572705643"
+        },
+        {
+          "text": "The Airbnb was clean and very well located.",
+          "polarity": "positive",
+          "expected_star": 4.62,
+          "text_id": "rev_1462761739878399586"
+        },
+        {
+          "text": "The room was very clean and we loved the beds.",
+          "polarity": "positive",
+          "expected_star": 4.61,
+          "text_id": "rev_1053229285492437180"
+        },
+        {
+          "text": "Too bad the shower and sink were completely dirty when we arrived!",
+          "polarity": "negative",
+          "expected_star": 1.42,
+          "text_id": "rev_884436596974496542"
+        }
+      ]
+    },
+    "crowd_level": {
+      "mean_sentiment": 0.5055,
+      "ci_95": [
+        0.4925,
+        0.5182
+      ],
+      "tokyo_mean": 0.4903,
+      "vs_tokyo": "above",
+      "review_mentions": 4085,
+      "overview_mentions": 145,
+      "listings_mentioning": 1241,
+      "share_of_ward_review_mentions": 0.1051,
+      "share_by_source": {
+        "review": 0.9657,
+        "overview": 0.0343
+      },
+      "quotes": [
+        {
+          "text": "close to 7/11, very quiet, a close walk to the station, and very close to the temples!",
+          "polarity": "positive",
+          "expected_star": 4.59,
+          "text_id": "rev_471075278"
+        },
+        {
+          "text": "The temples are right next door, Asahi hall is in walking distance, and the streets are so lively at night.",
+          "polarity": "positive",
+          "expected_star": 4.59,
+          "text_id": "rev_1449680490643545231"
+        },
+        {
+          "text": "The neighborhood is very quiet and felt very safe.",
+          "polarity": "positive",
+          "expected_star": 4.5,
+          "text_id": "rev_1316374979613475858"
+        },
+        {
+          "text": "We literally listen to the noise from next door and unable to sleep and was waken by the traffic at 7am.",
+          "polarity": "negative",
+          "expected_star": 1.49,
+          "text_id": "rev_930794634133526093"
+        }
+      ]
+    }
+  }
+}

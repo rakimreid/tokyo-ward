@@ -1,0 +1,564 @@
+{
+  "ward": "Koto",
+  "meta": {
+    "source": "Inside Airbnb Tokyo, snapshot 2025-09-29 (scraped 29-30 Sep 2025)",
+    "scope": "11 wards; Airbnb listings and reviews only",
+    "sentiment_model": "nlptown/bert-base-multilingual-uncased-sentiment (winner of Stage 2 bake-off)",
+    "sentiment_scale": "(expected star - 3) / 2, range -1..+1; review sentences only",
+    "ci_method": "95% cluster bootstrap over listings, 2000 replicates, seed 42",
+    "languages": "English sentences only for aspects and topics; Japanese, Chinese, Korean reviews not covered",
+    "caveats": [
+      "Ward differences in aspect sentiment are small; prefer vs_tokyo over raw ranks.",
+      "Sentence-level nlptown accuracy is lower than review-level (3-class weighted accuracy about 0.83); about half of its negative flags are wrong.",
+      "Negative quotes were each read and kept only if truly negative and on-aspect; positive quotes were not individually checked.",
+      "Aspect tags are keyword-led; validated precision about 0.92 (weighted), weakest for shopping and safety.",
+      "vs_tokyo flags come from 110 separate 95% intervals with no multiple-comparison adjustment; a few may be chance.",
+      "Host overviews are promotional and used for mention share only.",
+      "Median price is JPY per night (the source marks it with $)."
+    ]
+  },
+  "structured": {
+    "listing_count": 548,
+    "median_price": 14667.0,
+    "listings_with_price": 525,
+    "mean_review_scores_location": 4.702,
+    "mean_review_scores_rating": 4.755,
+    "review_count": 23391,
+    "review_nlptown_coverage": 0.588,
+    "review_cjk_share": 0.376
+  },
+  "top_topics_by_lift": [
+    {
+      "topic_id": 36,
+      "label": "museum / sumo / km",
+      "top_words": [
+        "museum",
+        "sumo",
+        "km",
+        "art",
+        "national",
+        "zoo"
+      ],
+      "share": 0.0337,
+      "lift": 1.84
+    },
+    {
+      "topic_id": 22,
+      "label": "tree / sky / sensoji",
+      "top_words": [
+        "tree",
+        "sky",
+        "sensoji",
+        "temple",
+        "skytree",
+        "meiji"
+      ],
+      "share": 0.0478,
+      "lift": 1.42
+    },
+    {
+      "topic_id": 35,
+      "label": "washing / machine / dryer",
+      "top_words": [
+        "washing",
+        "machine",
+        "dryer",
+        "washer",
+        "clothes",
+        "dry"
+      ],
+      "share": 0.0112,
+      "lift": 1.35
+    },
+    {
+      "topic_id": 19,
+      "label": "temple / asakusa / gate",
+      "top_words": [
+        "temple",
+        "asakusa",
+        "gate",
+        "sensoji",
+        "kaminarimon",
+        "temples"
+      ],
+      "share": 0.0353,
+      "lift": 1.35
+    },
+    {
+      "topic_id": 29,
+      "label": "playground / parks / sports",
+      "top_words": [
+        "playground",
+        "parks",
+        "sports",
+        "play",
+        "childrens",
+        "kids"
+      ],
+      "share": 0.0203,
+      "lift": 1.34
+    }
+  ],
+  "top_topics_by_share": [
+    {
+      "topic_id": 0,
+      "label": "convenience / supermarkets / stores",
+      "top_words": [
+        "convenience",
+        "supermarkets",
+        "stores",
+        "supermarket",
+        "grocery",
+        "restaurants"
+      ],
+      "share": 0.0807,
+      "lift": 0.92
+    },
+    {
+      "topic_id": 1,
+      "label": "visiting / visit / come",
+      "top_words": [
+        "visiting",
+        "visit",
+        "come",
+        "return",
+        "standards",
+        "explore"
+      ],
+      "share": 0.0669,
+      "lift": 1.15
+    },
+    {
+      "topic_id": 3,
+      "label": "line / toei / sta",
+      "top_words": [
+        "line",
+        "toei",
+        "sta",
+        "oedo",
+        "jr",
+        "harajuku"
+      ],
+      "share": 0.0637,
+      "lift": 0.82
+    },
+    {
+      "topic_id": 2,
+      "label": "subway / stations / train",
+      "top_words": [
+        "subway",
+        "stations",
+        "train",
+        "close",
+        "far",
+        "metro"
+      ],
+      "share": 0.0513,
+      "lift": 1.08
+    },
+    {
+      "topic_id": 11,
+      "label": "foot / store / seveneleven",
+      "top_words": [
+        "foot",
+        "store",
+        "seveneleven",
+        "shop",
+        "supermarket",
+        "lawson"
+      ],
+      "share": 0.0483,
+      "lift": 1.04
+    }
+  ],
+  "aspects": {
+    "food_dining": {
+      "mean_sentiment": 0.5414,
+      "ci_95": [
+        0.53,
+        0.5525
+      ],
+      "tokyo_mean": 0.5588,
+      "vs_tokyo": "below",
+      "review_mentions": 2493,
+      "overview_mentions": 97,
+      "listings_mentioning": 363,
+      "share_of_ward_review_mentions": 0.1072,
+      "share_by_source": {
+        "review": 0.9625,
+        "overview": 0.0375
+      },
+      "quotes": [
+        {
+          "text": "It's right above a great coffee shop too!",
+          "polarity": "positive",
+          "expected_star": 4.85,
+          "text_id": "rev_1079316414120146066"
+        },
+        {
+          "text": "We loved the neighborhood, easy access to subway and lots of great local restaurants just a few steps away.",
+          "polarity": "positive",
+          "expected_star": 4.63,
+          "text_id": "rev_1428716808848223501"
+        },
+        {
+          "text": "A nice place with really easy access to public transport, restaurants and convenience stores.",
+          "polarity": "positive",
+          "expected_star": 4.51,
+          "text_id": "rev_1509941823972076826"
+        },
+        {
+          "text": "all the restaurants were either closed or told us that they can't accept us.",
+          "polarity": "negative",
+          "expected_star": 1.3,
+          "text_id": "rev_1314973831220193571"
+        }
+      ]
+    },
+    "nightlife": {
+      "mean_sentiment": 0.3971,
+      "ci_95": [
+        0.3211,
+        0.4804
+      ],
+      "tokyo_mean": 0.5179,
+      "vs_tokyo": "below",
+      "review_mentions": 174,
+      "overview_mentions": 9,
+      "listings_mentioning": 77,
+      "share_of_ward_review_mentions": 0.0075,
+      "share_by_source": {
+        "review": 0.9508,
+        "overview": 0.0492
+      },
+      "quotes": [
+        {
+          "text": "Great accommodation in quiet area with bars & restaurants nearby.",
+          "polarity": "positive",
+          "expected_star": 4.63,
+          "text_id": "rev_1415627070848195372"
+        },
+        {
+          "text": "You’ll have a great kitchen space with a kitchen bar to sit and have your food.",
+          "polarity": "positive",
+          "expected_star": 4.54,
+          "text_id": "rev_573368313"
+        },
+        {
+          "text": "Restaurants, bars, subways, and convenient stores were all nearby and easy to access.",
+          "polarity": "positive",
+          "expected_star": 4.52,
+          "text_id": "rev_1462777060939894905"
+        }
+      ]
+    },
+    "shopping": {
+      "mean_sentiment": 0.529,
+      "ci_95": [
+        0.5102,
+        0.5475
+      ],
+      "tokyo_mean": 0.5575,
+      "vs_tokyo": "below",
+      "review_mentions": 896,
+      "overview_mentions": 97,
+      "listings_mentioning": 259,
+      "share_of_ward_review_mentions": 0.0385,
+      "share_by_source": {
+        "review": 0.9023,
+        "overview": 0.0977
+      },
+      "quotes": [
+        {
+          "text": "Food around was amazing and Kameido Clock has really good shopping destinations!!!",
+          "polarity": "positive",
+          "expected_star": 4.71,
+          "text_id": "rev_1290994670176201391"
+        },
+        {
+          "text": "We had a wonderful experience there shopping with all the locals aunties.",
+          "polarity": "positive",
+          "expected_star": 4.64,
+          "text_id": "rev_121114031"
+        },
+        {
+          "text": "It was a beautiful apartment with many places to eat, shopping centers, and sightseeing all within walking distance.",
+          "polarity": "positive",
+          "expected_star": 4.61,
+          "text_id": "rev_1269263281395521562"
+        }
+      ]
+    },
+    "traditional_cultural": {
+      "mean_sentiment": 0.5629,
+      "ci_95": [
+        0.5304,
+        0.5852
+      ],
+      "tokyo_mean": 0.5485,
+      "vs_tokyo": "similar",
+      "review_mentions": 461,
+      "overview_mentions": 102,
+      "listings_mentioning": 118,
+      "share_of_ward_review_mentions": 0.0198,
+      "share_by_source": {
+        "review": 0.8188,
+        "overview": 0.1812
+      },
+      "quotes": [
+        {
+          "text": "I stayed in the traditional room upstairs and had a super comfortable stay!",
+          "polarity": "positive",
+          "expected_star": 4.69,
+          "text_id": "rev_1507722007621522915"
+        },
+        {
+          "text": "The design and architectural solution are merging traditional Japanese qualities with modern minimalism and it is executed in impressive way!",
+          "polarity": "positive",
+          "expected_star": 4.61,
+          "text_id": "rev_1473660732874102595"
+        },
+        {
+          "text": "Lovely place, very traditional and cozy.",
+          "polarity": "positive",
+          "expected_star": 4.55,
+          "text_id": "rev_1021419991985191900"
+        }
+      ]
+    },
+    "family_friendliness": {
+      "mean_sentiment": 0.5864,
+      "ci_95": [
+        0.5591,
+        0.6105
+      ],
+      "tokyo_mean": 0.5704,
+      "vs_tokyo": "similar",
+      "review_mentions": 1331,
+      "overview_mentions": 12,
+      "listings_mentioning": 216,
+      "share_of_ward_review_mentions": 0.0572,
+      "share_by_source": {
+        "review": 0.9911,
+        "overview": 0.0089
+      },
+      "quotes": [
+        {
+          "text": "There family is great as well and incredibly sweet.",
+          "polarity": "positive",
+          "expected_star": 4.8,
+          "text_id": "rev_130012503"
+        },
+        {
+          "text": "The apartment was perfect for our family",
+          "polarity": "positive",
+          "expected_star": 4.63,
+          "text_id": "rev_28390970"
+        },
+        {
+          "text": "The house was very clean and had everything our family needed for our stay.",
+          "polarity": "positive",
+          "expected_star": 4.58,
+          "text_id": "rev_1439568133542189068"
+        }
+      ]
+    },
+    "nature_parks": {
+      "mean_sentiment": 0.569,
+      "ci_95": [
+        0.5401,
+        0.5952
+      ],
+      "tokyo_mean": 0.5845,
+      "vs_tokyo": "similar",
+      "review_mentions": 402,
+      "overview_mentions": 59,
+      "listings_mentioning": 165,
+      "share_of_ward_review_mentions": 0.0173,
+      "share_by_source": {
+        "review": 0.872,
+        "overview": 0.128
+      },
+      "quotes": [
+        {
+          "text": "We had a fantastic stay at the Wood and River House.",
+          "polarity": "positive",
+          "expected_star": 4.7,
+          "text_id": "rev_1427309320910959214"
+        },
+        {
+          "text": "It’s awesome that it’s near the Kameido station and that it’s located near stores, parks and restaurants.",
+          "polarity": "positive",
+          "expected_star": 4.57,
+          "text_id": "rev_1309160007097091487"
+        },
+        {
+          "text": "It was very happy to stay at Sakura's newly home.",
+          "polarity": "positive",
+          "expected_star": 4.51,
+          "text_id": "rev_1458395426886875595"
+        }
+      ]
+    },
+    "walkability_transit": {
+      "mean_sentiment": 0.4859,
+      "ci_95": [
+        0.4759,
+        0.4966
+      ],
+      "tokyo_mean": 0.4946,
+      "vs_tokyo": "similar",
+      "review_mentions": 6665,
+      "overview_mentions": 244,
+      "listings_mentioning": 413,
+      "share_of_ward_review_mentions": 0.2867,
+      "share_by_source": {
+        "review": 0.9647,
+        "overview": 0.0353
+      },
+      "quotes": [
+        {
+          "text": "Great location filled with a market, food vendors and variety restaurants and close to Ojima train station.",
+          "polarity": "positive",
+          "expected_star": 4.72,
+          "text_id": "rev_1212000692934666837"
+        },
+        {
+          "text": "Walking distance to the train station we were attending a sports show so very convenient to Tokyo Big Sight.",
+          "polarity": "positive",
+          "expected_star": 4.54,
+          "text_id": "rev_1478689062274681596"
+        },
+        {
+          "text": "The hotel is in a great location—only several minutes to the Kameido train station and all the nearby restaurants.",
+          "polarity": "positive",
+          "expected_star": 4.51,
+          "text_id": "rev_1287408362260832743"
+        }
+      ]
+    },
+    "safety": {
+      "mean_sentiment": 0.5509,
+      "ci_95": [
+        0.4962,
+        0.601
+      ],
+      "tokyo_mean": 0.563,
+      "vs_tokyo": "similar",
+      "review_mentions": 296,
+      "overview_mentions": 2,
+      "listings_mentioning": 175,
+      "share_of_ward_review_mentions": 0.0127,
+      "share_by_source": {
+        "review": 0.9933,
+        "overview": 0.0067
+      },
+      "quotes": [
+        {
+          "text": "The area is incredibly safe, and even during rush hour, it maintains a calm and relaxed vibe.",
+          "polarity": "positive",
+          "expected_star": 4.75,
+          "text_id": "rev_1368536201136661978"
+        },
+        {
+          "text": "Very nice and secure apartment to stay in and it had everything I needed.",
+          "polarity": "positive",
+          "expected_star": 4.68,
+          "text_id": "rev_570656501"
+        },
+        {
+          "text": "My stay was extremely comfortable and I felt very safe.",
+          "polarity": "positive",
+          "expected_star": 4.64,
+          "text_id": "rev_1221479534886266312"
+        }
+      ]
+    },
+    "accommodation_value": {
+      "mean_sentiment": 0.5462,
+      "ci_95": [
+        0.5322,
+        0.5604
+      ],
+      "tokyo_mean": 0.5215,
+      "vs_tokyo": "above",
+      "review_mentions": 7878,
+      "overview_mentions": 10,
+      "listings_mentioning": 424,
+      "share_of_ward_review_mentions": 0.3389,
+      "share_by_source": {
+        "review": 0.9987,
+        "overview": 0.0013
+      },
+      "quotes": [
+        {
+          "text": "It has 3 separate bedrooms, check in was easy, clean, and location is amazing !!!",
+          "polarity": "positive",
+          "expected_star": 4.68,
+          "text_id": "rev_1162685884657398238"
+        },
+        {
+          "text": "Everything was clean from the bedroom linens to the bathroom, toilet, kitchen, and living room area.",
+          "polarity": "positive",
+          "expected_star": 4.54,
+          "text_id": "rev_1425104609631650674"
+        },
+        {
+          "text": "I highly recommend staying here if you need an affordable, clean, and (mostly lol) quiet space to recharge after a busy day.",
+          "polarity": "positive",
+          "expected_star": 4.53,
+          "text_id": "rev_1035830149025717338"
+        },
+        {
+          "text": "Ants crawling everywhere and the bathroom was the worst part.",
+          "polarity": "negative",
+          "expected_star": 1.24,
+          "text_id": "rev_1266424099447201476"
+        }
+      ]
+    },
+    "crowd_level": {
+      "mean_sentiment": 0.5226,
+      "ci_95": [
+        0.5068,
+        0.5382
+      ],
+      "tokyo_mean": 0.4903,
+      "vs_tokyo": "above",
+      "review_mentions": 2653,
+      "overview_mentions": 48,
+      "listings_mentioning": 360,
+      "share_of_ward_review_mentions": 0.1141,
+      "share_by_source": {
+        "review": 0.9822,
+        "overview": 0.0178
+      },
+      "quotes": [
+        {
+          "text": "I highly recommend his airbnb because of the supplies that are available in the hotel and the peaceful streets.",
+          "polarity": "positive",
+          "expected_star": 4.82,
+          "text_id": "rev_1448330373802589489"
+        },
+        {
+          "text": "It's such a nice place,clean,quiet,and near at public transportation.The trains are accessible in all places you want to go to.",
+          "polarity": "positive",
+          "expected_star": 4.6,
+          "text_id": "rev_1477333750519688756"
+        },
+        {
+          "text": "Your place is so nice ang peaceful surroundings.",
+          "polarity": "positive",
+          "expected_star": 4.54,
+          "text_id": "rev_1072844324445080363"
+        },
+        {
+          "text": "It's super noisy there I swear, and the landlord don't have any solution for this.",
+          "polarity": "negative",
+          "expected_star": 1.42,
+          "text_id": "rev_1412228049321660596"
+        }
+      ]
+    }
+  }
+}
